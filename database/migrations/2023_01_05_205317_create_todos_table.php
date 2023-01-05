@@ -17,6 +17,7 @@ class CreateTodosTable extends Migration
             $table->id();
             $table->foreignId('ticket_id')->constrained();
             $table->string('task');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

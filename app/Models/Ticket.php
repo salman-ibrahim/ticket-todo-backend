@@ -11,7 +11,9 @@ class Ticket extends Model
 {
     use HasFactory, SoftDeletes;
 
-    public function tickets():HasMany {
+    protected $guarded = [];
+
+    public function todos():HasMany {
         return $this->hasMany(Todo::class);
     }
 }

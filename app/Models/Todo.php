@@ -11,6 +11,8 @@ class Todo extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $guarded = [];
+
     public function ticket():BelongsTo {
         return $this->belongsTo(Ticket::class);
     }
